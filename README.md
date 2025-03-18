@@ -15,9 +15,12 @@ Okay, so what are all the puzzle pieces we need to solve in order to make a bund
 2. Cramming it into one file that executes the code in the correct order
 
 
-Other things to think about later:
+Other things to think about:
 
 1. Solving for assets like SVG
+2. node module resolution algorithm
+3. Common JS & ES Modules
+4. Producing a bundle map
 
 
 ## Bibliography
