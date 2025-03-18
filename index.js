@@ -1,1 +1,3 @@
-console.log("Hello! Welcome to Cram!");
+const fruits = require("./src/fruits");
+
+console.log(fruits);
