@@ -1,27 +1,3 @@
-// Things to think about:
-// 1. node module resolution algorithm
-// 2. .cjs & esm integration - if package is esm, code is cjs or vice versa, how will that work?
-// 3. Same dependency for many files
-// 4. node_modules
-// 5. minification
-//
-// 1. Start executing Code
-// 2. Encounter a dependency
-// 3. Bring code from there and cram into the bundle
-
-// function getCode(inputFile) {
-//   const code = read(inputFile);
-
-//   const dependencies = findDependencies(code);
-
-//   dependencies.forEach((dependency) => {
-//     const dependencyCode = getCode(dependency);
-//     code.replaceRequireWithCode(dependency, dependencyCode);
-//   });
-
-//   return code;
-// }
-
 const fs = require("fs");
 const path = require("path");
 

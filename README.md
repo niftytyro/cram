@@ -25,6 +25,8 @@ Other things to think about:
 4. Producing a bundle map
 5. Resolving node_modules imports
 6. Minification
+7. Handling same dependency for many files
+8. Handling comments
 
 
 ## Bibliography
