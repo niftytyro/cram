@@ -17,16 +17,21 @@ Okay, so what are all the puzzle pieces we need to solve in order to make a bund
 2. Cramming it into one file that executes the code in the correct order
 
 
+Next steps:
+
+1. Create a dependency graph and solve dependency resolution and module injection in a more structured way
+2. Compatibility with Node.js module resolution algorithm
+3. Handle comments
+4. Support for ES Modules and import syntax
+5. Support for `node_modules`
+6. Handling same dependency for many files
+7. Produce a js map
+8. Minification
+
+
 Other things to think about:
 
 1. Solving for assets like SVG
-2. Node.js module resolution algorithm
-3. Common JS & ES Modules
-4. Producing a bundle map
-5. Resolving node_modules imports
-6. Minification
-7. Handling same dependency for many files
-8. Handling comments
 
 
 ## Bibliography
