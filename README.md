@@ -32,6 +32,7 @@ Next steps:
 Other things to think about:
 
 1. Solving for assets like SVG
+2. Explore additional functionality like support for transpiling ts to js and so on
 
 
 ## Bibliography
