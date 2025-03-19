@@ -1,11 +1,13 @@
-const fs = require("fs");
-const path = require("path");
+import * as fs from "fs";
+import * as path from "path";
 
-/**
- * @param {string} code
- */
-async function generateDependencies(code, parentDir) {
-  const dependencies = [];
+interface Dependency {
+  name: string;
+  code: string;
+}
+
+async function generateDependencies(code: string, parentDir: string) {
+  const dependencies: Array<Dependency> = [];
 
   const requireStatements = code
     .split("\n")
@@ -38,7 +40,7 @@ async function generateDependencies(code, parentDir) {
   return dependencies;
 }
 
-async function readCode(inputFile, bundle = "") {
+async function readCode(inputFile: string, bundle = "") {
   // const moduleName = getModuleName(inputFile);
   const moduleName = inputFile;
 
@@ -62,7 +64,7 @@ async function readCode(inputFile, bundle = "") {
   return bundle;
 }
 
-async function bundle(entryPoint, output) {
+async function bundle(entryPoint: string) {
   const code = await readCode(entryPoint);
 
   const bundle = `
@@ -88,8 +90,8 @@ async function bundle(entryPoint, output) {
 }
 
 const inputFile = process.argv[2];
-const output = process.argv[3];
+// const output = process.argv[3];
 
 const entryPoint = path.resolve(inputFile);
 
-bundle(entryPoint, output);
+bundle(entryPoint);

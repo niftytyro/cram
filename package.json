@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "A super-simple Javascript bundler written for fun.",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
+    "build": "tsc",
+    "dev:cram": "ts-node src/index.ts example/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +22,10 @@
   "bugs": {
     "url": "https://github.com/niftytyro/cram/issues"
   },
-  "homepage": "https://github.com/niftytyro/cram#readme"
+  "homepage": "https://github.com/niftytyro/cram#readme",
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  }
 }
