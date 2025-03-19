@@ -2,6 +2,8 @@
 
 Cram is a super-simple Javascript bundler built for fun! I named it Cram because if you think about it, a bundler kinda crams all of the javascript togetherinto 1 file.
 
+The plan here is to not use existing tools as much as possible and build all of it from scratch. This is just an exercise of learning and joy.
+
 ## Notes
 
 These are just notes I will be jotting down for my own understanding as I figure out how to build this.
@@ -18,9 +20,11 @@ Okay, so what are all the puzzle pieces we need to solve in order to make a bund
 Other things to think about:
 
 1. Solving for assets like SVG
-2. node module resolution algorithm
+2. Node.js module resolution algorithm
 3. Common JS & ES Modules
 4. Producing a bundle map
+5. Resolving node_modules imports
+6. Minification
 
 
 ## Bibliography
