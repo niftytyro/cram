@@ -74,11 +74,7 @@ async function readCode(inputFile, bundle = "") {
   );
 
   dependencies.forEach((dependency) => {
-    bundle += `
-    modules["${dependency.name}"] = function () {
-      ${dependency.code}
-    }
-    `;
+    bundle += dependency.code;
   });
 
   bundle += `
