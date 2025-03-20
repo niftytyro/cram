@@ -56,7 +56,13 @@ async function readCode(inputFile: string, bundle = "") {
   });
 
   bundle += `
-  modules["${moduleName}"] = function () {
+  modules["${moduleName}"] = function (module) {
+    function require(dependencyName) {
+      return _require(path.join("${path.dirname(
+        moduleName
+      )}", dependencyName) + ( dependencyName.endsWith(".js")?"":".js" ))
+    }
+
     ${code}
   }
   `;
@@ -68,11 +74,12 @@ async function bundle(entryPoint: string) {
   const code = await readCode(entryPoint);
 
   const bundle = `
+  const path = require('path')
+
       const modules = {};
 
-      function require(moduleName) {
+      function _require(moduleName) {
         const module = {exports: {}}
-
 
         modules[moduleName](module); // someModuleExportsHereWhileRunningTheCodeInTheModule;
         
